@@ -1,0 +1,33 @@
+skin.png
+size: 128,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+touchpad
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+touchpadKnob
+  rotate: false
+  xy: 64, 0
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+square
+  rotate: false
+  xy: 0, 64
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+rect
+  rotate: false
+  xy: 64, 32
+  size: 64, 32
+  orig: 64, 32
+  offset: 0, 0
+  index: -1

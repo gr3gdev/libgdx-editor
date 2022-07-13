@@ -6,8 +6,29 @@ plugins {
 group 'org.github.gr3gdev'
 version '1.0-SNAPSHOT'
 
+ext {
+    gdxVersion = "1.11.0"
+    gltfVersion = "2.0.0-rc.1"
+    jacksonVersion = "2.13.3"
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    implementation "com.github.mgsx-dev.gdx-gltf:gltf:$gltfVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/

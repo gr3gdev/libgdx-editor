@@ -1,0 +1,204 @@
+{
+  com.badlogic.gdx.graphics.g2d.BitmapFont: {
+    default: {
+      file: font/arial-15.fnt
+    }
+  },
+  com.badlogic.gdx.graphics.Color: {
+    white: { r: 1, g: 1, b: 1, a: 1 },
+    gray: { r: 0.5, g: 0.5, b: 0.5, a: 1 },
+    black: { r: 0, g: 0, b: 0, a: 1 },
+    green: { r: 0, g: 1, b: 0, a: 1 },
+    up: { r: 0.1, g: 0.1, b: 0.1, a: 1 },
+    over: { r: 0.3, g: 0.3, b: 0.3, a: 1 },
+    down: { r: 0, g: 0, b: 0, a: 1 },
+    disabled: { r: 1, g: 1, b: 1, a: 0.5 },
+    background: { r: 0.2, g: 0.2, b: 0.2, a: 1 },
+    semiTransparent: { r: 0, g: 0, b: 0, a: 0.5 },
+    knob: { r: 0.5, g: 0.5, b: 0.5, a: 0.2 },
+    checked: green,
+    font: white,
+    fontOver: white,
+    fontDown: gray,
+    fontChecked: white,
+    fontCheckedOver: white,
+    fontDisabled: gray
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+    buttonUp: {
+      name: square,
+      color: up
+    },
+    buttonOver: {
+      name: square,
+      color: over
+    },
+    buttonDown: {
+      name: square,
+      color: down
+    },
+    buttonDisabled: {
+      name: square,
+      color: disabled
+    },
+    buttonChecked: {
+      name: square,
+      color: checked
+    },
+    buttonCheckedOver: {
+      name: square,
+      color: over
+    },
+    touchpad: {
+      name: touchpad,
+      color: semiTransparent
+    },
+    touchpadKnob: {
+      name: touchpadKnob,
+      color: knob
+    },
+    selectBox: {
+      name: rect,
+      color: gray
+    },
+    selectBoxOpen: {
+      name: rect,
+      color: white
+    },
+    hScrollKnob: {
+      name: rect,
+      color: gray
+    },
+    vScrollKnob: {
+      name: rect,
+      color: gray
+    },
+    hScroll: {
+      name: rect,
+      color: gray
+    },
+    vScroll: {
+      name: rect,
+      color: gray
+    },
+    list: {
+      name: rect,
+      color: gray
+    }
+    selection: {
+      name: rect,
+      color: checked
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+    default: {
+      up: buttonUp,
+      over: buttonOver,
+      down: buttonDown,
+      disabled: buttonDisabled
+    },
+    toggle: {
+      up: buttonUp,
+      over: buttonOver,
+      down: buttonDown,
+      checked: buttonChecked,
+      checkedOver: buttonCheckedOver,
+      disabled: buttonDisabled
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+    default: {
+      font: default,
+      fontColor: font
+    },
+    white: {
+      font: default,
+      fontColor: white
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+    default: {
+      up: buttonUp,
+      over: buttonOver,
+      down: buttonDown,
+      disabled: buttonDisabled,
+      font: default,
+      fontColor: font,
+      overFontColor: fontOver,
+      downFontColor: fontDown,
+      disabledFontColor: fontDisabled,
+      pressedOffsetY: -1,
+      pressedOffsetX: 1
+    },
+    toggle: {
+      up: buttonUp,
+      over: buttonOver,
+      down: buttonDown,
+      checked: buttonChecked,
+      checkedOver: buttonCheckedOver,
+      disabled: buttonDisabled,
+      font: default,
+      fontColor: font,
+      overFontColor: fontOver,
+      downFontColor: fontDown,
+      disabledFontColor: fontDisabled,
+      checkedFontColor: fontChecked,
+      checkedOverFontColor: fontCheckedOver,
+      pressedOffsetY: -1,
+      pressedOffsetX: 1
+    },
+    text: {
+      font: default,
+      fontColor: up,
+      overFontColor: over,
+      downFontColor: down,
+      disabledFontColor: disabled,
+      pressedOffsetY: -1,
+      pressedOffsetX: 1
+    },
+    textToggle: {
+      font: default,
+      fontColor: up,
+      overFontColor: over,
+      downFontColor: down,
+      disabledFontColor: disabled,
+      checkedFontColor: font,
+      checkedOverFontColor: fontOver,
+      pressedOffsetY: -1,
+      pressedOffsetX: 1
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+    default: {
+      background: touchpad,
+      knob: touchpadKnob
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+    default: {
+      hScrollKnob: hScrollKnob,
+      vScrollKnob: vScrollKnob,
+      hScroll: hScroll,
+      vScroll: vScroll
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+    default: {
+      fontColorUnselected: font,
+      selection: selection,
+      fontColorSelected: fontDown,
+      font: default,
+      background: list
+    }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+    default: {
+      font: default,
+      fontColor: black,
+      background: selectBox,
+      scrollStyle: default,
+      listStyle: default,
+      backgroundOpen: selectBoxOpen
+    }
+  }
+}

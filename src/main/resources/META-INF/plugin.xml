@@ -1,22 +1,30 @@
 <idea-plugin>
-    <id>org.example.libgdx-editor</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>com.github.gr3gdev.libgdx-editor</id>
+    <name>LibGDX Editor</name>
+    <vendor email="gregory.tardivel@gmail.com" url="https://github.com/gr3gdev">gr3gdev</vendor>
 
-    <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-    ]]></description>
+    <description><![CDATA[Plugin for creating games with libGDX library]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
+    <resource-bundle>messages.LibGDXEditorBundle</resource-bundle>
+
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <fileType name="LibGDX Screen File"
+                  implementationClass="com.github.gr3gdev.libgdx.editor.screen.LibGDXScreenFileType"
+                  fieldName="INSTANCE" language="LibGDXScreen" extensions="screen"/>
+        <fileEditorProvider implementation="com.github.gr3gdev.libgdx.editor.screen.LibGDXScreenFileProvider"/>
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
+        <action class="com.github.gr3gdev.libgdx.editor.screen.action.LibGDXScreenFileAction"
+                id="com.github.gr3gdev.libgdx.editor.screen.action.LibGDXScreenFileAction"
+                text="New LibGDX Screen" description="Create a screen with libgdx-editor">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>
